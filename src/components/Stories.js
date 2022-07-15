@@ -1,15 +1,19 @@
 export default function Stories() {
+    const Stories = [{ img: "assets/img/9gag.svg", name: "9gag" },
+    { img: "assets/img/meowed.svg", name: "meowed" },
+    { img: "assets/img/barked.svg", name: "barked" },
+    { img: "assets/img/nathanwpylestrangeplanet.svg", name: "nathanwpylestrangeplanet" },
+    { img: "assets/img/wawawicomics.svg", name: "wawawicomics" },
+    { img: "assets/img/respondeai.svg", name: "respondeai" },
+    { img: "assets/img/filomoderna.svg", name: "filomoderna" },
+    { img: "assets/img/memeriagourmet.svg", name: "memeriagourmet" }];
+
     return (
         <div class="stories">
 
-            <Story img="assets/img/9gag.svg" name="9gag" />
-            <Story img="assets/img/meowed.svg" name="meowed" />
-            <Story img="assets/img/barked.svg" name="barked" />
-            <Story img="assets/img/nathanwpylestrangeplanet.svg" name="nathanwpylestrangeplanet" />
-            <Story img="assets/img/wawawicomics.svg" name="wawawicomics" />
-            <Story img="assets/img/respondeai.svg" name="respondeai" />
-            <Story img="assets/img/filomoderna.svg" name="filomoderna" />
-            <Story img="assets/img/memeriagourmet.svg" name="memeriagourmet" />
+            {Stories.map((value) => (
+                <Story img={value.img} name={value.name} />
+            ))}
 
             <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
