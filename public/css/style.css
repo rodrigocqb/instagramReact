@@ -310,6 +310,10 @@ body {
   display: none !important;
 }
 
+.acoes ion-icon[name=heart] {
+  color: #ec4141;
+}
+
 @media (max-width: 935px) {
   .sidebar {
     display: none;

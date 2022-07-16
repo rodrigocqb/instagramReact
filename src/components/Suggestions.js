@@ -6,8 +6,8 @@ export default function Suggestions() {
     { img: "assets/img/smallcutecats.svg", name: "smallcutecats", status: "Segue você" }];
 
     return (
-        <div class="sugestoes">
-            <div class="titulo">
+        <div className="sugestoes">
+            <div className="titulo">
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
@@ -22,16 +22,16 @@ export default function Suggestions() {
 
 function Sugestao(props) {
     return (
-        <div class="sugestao">
-            <div class="usuario">
+        <div className="sugestao">
+            <div className="usuario">
                 <img src={props.img} />
-                <div class="texto">
-                    <div class="nome">{props.name}</div>
-                    <div class="razao">{props.status}</div>
+                <div className="texto">
+                    <div className="nome">{props.name}</div>
+                    <div className="razao">{props.status}</div>
                 </div>
             </div>
 
-            <div class="seguir">Seguir</div>
+            <div className="seguir">Seguir</div>
         </div>
     )
 }

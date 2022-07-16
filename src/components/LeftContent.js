@@ -3,7 +3,7 @@ import Stories from "./Stories";
 
 export default function LeftContent() {
     return (
-        <div class="esquerda">
+        <div className="esquerda">
             <Stories />
 
             <Posts />

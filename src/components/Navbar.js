@@ -3,25 +3,25 @@ import LogosDesktop from "./LogosDesktop";
 
 export default function Navbar() {
     return (
-        <div class="navbar">
-            <div class="container">
+        <div className="navbar">
+            <div className="container">
                 <LogosDesktop />
 
-                <div class="logo-mobile">
+                <div className="logo-mobile">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </div>
 
-                <div class="instagram-mobile">
+                <div className="instagram-mobile">
                     <img src="assets/img/logo.png" />
                 </div>
 
-                <div class="pesquisa">
+                <div className="pesquisa">
                     <input type="text" placeholder="Pesquisar" />
                 </div>
 
                 <IconsDesktop />
 
-                <div class="icones-mobile">
+                <div className="icones-mobile">
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
             </div>

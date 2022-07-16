@@ -6,9 +6,9 @@ export default function Username() {
 
 function User(props) {
     return (
-        <div class="usuario">
+        <div className="usuario">
             <img src={props.img} />
-            <div class="texto">
+            <div className="texto">
                 <strong>{props.username}</strong>
                 {props.name}
             </div>

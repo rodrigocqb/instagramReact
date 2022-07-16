@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Posts() {
     const Posts = [{
         userImg: "assets/img/meowed.svg", username: "meowed", postImg: "assets/img/gato-telefone.svg",
@@ -8,7 +10,7 @@ export default function Posts() {
     }];
 
     return (
-        <div class="posts">
+        <div className="posts">
             {Posts.map((value) => (
                 <Post userImg={value.userImg} username={value.username} postImg={value.postImg}
                     likeImg={value.likeImg} likeUser={value.likeUser} likeNumber={value.likeNumber} />
@@ -18,26 +20,28 @@ export default function Posts() {
 }
 
 function Post(props) {
+    const [heart, setHeart] = React.useState("heart-outline");
+
     return (
-        <div class="post">
-            <div class="topo">
-                <div class="usuario">
+        <div className="post">
+            <div className="topo">
+                <div className="usuario">
                     <img src={props.userImg} />
                     {props.username}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
 
-            <div class="conteudo">
+            <div className="conteudo" onClick={() => { if (heart === "heart-outline") { setHeart("heart") } }}>
                 <img src={props.postImg} />
             </div>
 
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name={heart} onClick={() => { heart === "heart-outline" ? setHeart("heart") : setHeart("heart-outline") }} ></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
@@ -46,9 +50,9 @@ function Post(props) {
                     </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={props.likeImg} />
-                    <div class="texto">
+                    <div className="texto">
                         Curtido por <strong>{props.likeUser}</strong> e <strong>outras {props.likeNumber} pessoas</strong>
                     </div>
                 </div>
